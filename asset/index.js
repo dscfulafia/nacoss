@@ -1,4 +1,4 @@
-var fName, lname, email, phone, matric, level;//variables to be used
+var fName, amount, lname, email, phone, matric, level;//variables to be used
 
  function validate() {
      var x=document.querySelectorAll("input[required]");
@@ -35,12 +35,13 @@ var fName, lname, email, phone, matric, level;//variables to be used
         phone = document.getElementById("Phone").value;
         matric = document.getElementById("matric").value;
         level = document.getElementById("level").value;
+        amount = Number(document.getElementById("amount").value);
         payWithPayant()
      }
 
  }
 
- /*function payWithPayant() {
+/* function payWithPayant() {
      // body...
      console.log("fName: " + fName)
      console.log("lname: " + lname)
@@ -48,6 +49,8 @@ var fName, lname, email, phone, matric, level;//variables to be used
      console.log("phone: " + phone)
      console.log("matric: " + matric)
      console.log("level: " + level)
+     console.log("amount: " + amount)
+     console.log(typeof(amount))
  }*/
 
    function payWithPayant() {
@@ -65,7 +68,7 @@ var fName, lname, email, phone, matric, level;//variables to be used
                     {
                       "item": matric,
                       "description": "NACOSS",
-                      "unit_cost": amount_to_pay,
+                      "unit_cost": amount,
                       "quantity": "1"
                     }
                   ],

@@ -165,7 +165,6 @@
                       <div class="form-group col-md-6">
                           <b><label for="level">Select level</label></b>
                           <select class="form-control" title="level"  id="level" required>
-                            <option value="">Select level</option>
                             <option value="100">100 level</option>
                             <option value="200">200 level</option>
                             <option value="300">300 level</option>
@@ -173,8 +172,17 @@
                           </select>
                       </div>
                   </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <b><label for="Amount">Amount</label></b>
+                          <input required type="Number" max="7000" class="form-control"  title="Amount to pay"  id="amount" placeholder="Amount" min="500">
+                      </div>
+                      <div class="form-group col-md-6">
+                      </div>
+                  </div>
                     
-                    <label><input required type="checkbox" >&nbsp;I have confirmed that all details provided by me are correct</label>
+                    <label><input required type="checkbox" title="acceptance button" >&nbsp;I have confirmed that all details provided by me are correct</label>
                     <br>
                     <span style="color: white;display: none" id="processing"><i class="fa fa-refresh fa-spin"></i>Processing......</span>
 
